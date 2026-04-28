@@ -1,0 +1,12 @@
+/* ul 태그 밑의 li 모두 */
+ul li {
+    color:tomato
+}
+
+li {
+    color: brown
+}
+
+#cola li {
+    color: red;
+}

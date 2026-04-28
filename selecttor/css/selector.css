@@ -1,0 +1,38 @@
+body{ font-family: 'Noto Sans KR', sans-serif;}
+section{
+    border:1px solid lightgray;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px,20px,30px,40px;
+}
+a:link{
+    color:black
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    color: yellow;
+}
+
+.group-list li:first-child{
+    font-size: 11px;
+    color: silver;
+}
+
+.group-list li:first-child::before{
+    content: "← first";
+    color :silver;
+    font-size: 11px;
+}
+.group-list li:last-child::after{
+    content: "← last";
+    color :silver;
+    font-size: 11px;
+}
+
+.group-list li:nth-child(2){
+    background-color :lightgreen;
+    padding-left: 20px;
+    font-size: 11px;
+}
