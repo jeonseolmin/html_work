@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+
+    <script>
+        alert("짠~~~")
+
+        function check_sign(event){
+            alert("가입 단추 눌림")
+            let userId = document.querySelector("#user_id")
+            let email = document.querySelector("#email")
+            let password = document.querySelector("#password")
+            let confirm = document.querySelector("#confirm")
+            let path = document.querySelector("#path")
+            let memo = document.querySelector("#memo")
+            let mail = document.getElementById("mail")
+            let bus = document.getElementById("bus")
+            let metro = document.getElementById("metro")
+            let walking = document.getElementById("walking")
+
+            // 버스가 체크 되었는지 확인
+            if (bus.checked) {
+                bus.value = "OK"
+            } 
+            console.log(bus.value)
+            console.log(userId.value)
+            console.log(email.value)
+        }
+    </script>
 </head>
 <body>
     <div class = "container">
         <h1>회원가입을 환영합니다.</h1>
-        <form method="get">
+        <form onsubmit="check_sign(event)" method="get">
             <fieldset>
                 <legend>사용자정보</legend>
                 <ul>
