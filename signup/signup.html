@@ -1,98 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/signup.css">
+        <script src="js/signup.js"></script>
+        <title>회원가입</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>회원가입을 환영합니다.</h1>
+            <form onsubmit="check_sign(event)" method="get">
+                <fieldset>
+                    <legend>사용자정보</legend>
+                    <ul>
+                        <li>
+                            <label for="user_id">아이디</label>
+                            <input type="text" id="user_id" name="user_id" required placeholder="4자~10자 사이, 공백없이" autofocus>
+                        </li>
+                        <li>
+                            <label for="email">이메일</label>
+                            <input type="email" name=email , id="email">
+                        </li>
+                        <li>
+                            <label for="password">비밀번호</label>
+                            <input type="password" name="password" , id="password" placeholder="문자와 숫자, 특수기호 포함 8자 이상">
+                        </li>
+                        <li>
+                            <label for="confirm">비밀번호 확인</label>
+                            <input type="password" id="confirm">
+                        </li>
+                        <li>
+                            <label for="path">가입 경로</label>
+                            <select name="path" id="path">
+                                <option value="blog">블로그</option>
+                                <option value="search">검색</option>
+                                <option value="sns">SNS</option>
+                                <option value="etc">기타</option>
+                            </select>
 
-    <script>
-        alert("짠~~~")
-
-        function check_sign(event){
-            alert("가입 단추 눌림")
-            let userId = document.querySelector("#user_id")
-            let email = document.querySelector("#email")
-            let password = document.querySelector("#password")
-            let confirm = document.querySelector("#confirm")
-            let path = document.querySelector("#path")
-            let memo = document.querySelector("#memo")
-            let mail = document.getElementById("mail")
-            let bus = document.getElementById("bus")
-            let metro = document.getElementById("metro")
-            let walking = document.getElementById("walking")
-
-            // 버스가 체크 되었는지 확인
-            if (bus.checked) {
-                bus.value = "OK"
-            } else{
-                bus.value = "NO"
-            }
-            console.log(bus.value)
-            console.log(userId.value)
-            console.log(email.value)
-        }
-    </script>
-</head>
-<body>
-    <div class = "container">
-        <h1>회원가입을 환영합니다.</h1>
-        <form onsubmit="check_sign(event)" method="get">
-            <fieldset>
-                <legend>사용자정보</legend>
-                <ul>
-                    <li>
-                        <label for="user_id">아이디</label>
-                        <input type="text" id = "user_id" name = "user_id" required placeholder="4자~10자 사이, 공백없이" autofocus>
-                    </li>
-                    <li>
-                        <label for="email">이메일</label>
-                        <input type="email" name = email , id = "email">
-                    </li>
-                    <li >
-                        <label for = "password">비밀번호</label>
-                        <input type="password" name="password", id="password" placeholder="문자와 숫자, 특수기호 포함 8자 이상">
-                    </li>
-                    <li>
-                        <label for="confirm">비밀번호 확인</label>
-                        <input type="password" id ="confirm">
-                    </li>
-                    <li>
-                        <label for="path">가입 경로</label>
-                        <select name="path" id="path">
-                            <option value="blog">블로그</option>
-                            <option value="search">검색</option>
-                            <option value="sns">SNS</option>
-                            <option value="etc">기타</option>
-                        </select>
-
-                    </li>
-                    <li>
-                        <label for="memo">메모</label>
-                        <textarea name="memo" id="memo" clos="40" rows="4"></textarea>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>이벤트와 새로운 소식</legend>
-                <input type="radio" name = "mail" id = "mail_yes" value="yes" checked>
-                <label for="mail_yes">메일 수신</label>
-                <input type="radio" name = "mail" id = "mail_no" value="no">
-                <label for="mail_no">메일 수신 안 함</label>
-            </fieldset>
-            <fieldset>
-                <legend>이동 수단</legend>
-                <input type="checkbox" id="bus" name="bus">
-                <label for="bus">버스</label>
-                <input type="checkbox" id="metro" name="metro">
-                <label for="metro">지하철</label>
-                <input type="checkbox" id="walking" name="walking">
-                <label for="walking">걷기</label>
-            </fieldset>
-            <div class="buttons">
-                <input type="submit" value="가입하기">
-                <input type="reset" value="취소">
-            </div>
-        </form>
-    </div>
-</body>
+                        </li>
+                        <li>
+                            <label for="memo">메모</label>
+                            <textarea name="memo" id="memo" clos="40" rows="4"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>이벤트와 새로운 소식</legend>
+                    <input type="radio" name="mail" id="mail_yes" value="yes" checked>
+                    <label for="mail_yes">메일 수신</label>
+                    <input type="radio" name="mail" id="mail_no" value="no">
+                    <label for="mail_no">메일 수신 안 함</label>
+                </fieldset>
+                <fieldset>
+                    <legend>이동 수단</legend>
+                    <input type="checkbox" id="bus" name="bus">
+                    <label for="bus">버스</label>
+                    <input type="checkbox" id="metro" name="metro">
+                    <label for="metro">지하철</label>
+                    <input type="checkbox" id="walking" name="walking">
+                    <label for="walking">걷기</label>
+                </fieldset>
+                <div class="buttons">
+                    <input type="submit" value="가입하기">
+                    <input type="reset" value="취소">
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
