@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../Users/human-01"
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"."
+		],
+		"java.project.referencedLibraries": [],
+		"liveServer.settings.multiRootWorkspaceName": "VSCODE"
+	}
+}

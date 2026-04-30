@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 화면</title>
+</head>
+<body>
+    <div class = "container">
+        <a href="../signup/signup.html"></a> <h4>회원 가입</h4>
+        <form method="get">
+            <fieldset>
+                <h1 >프런트엔드 개발자 지원서</h1>
+                <h3 style="font-weight : 350 ;  border-bottom: 2px solid gainsboro; padding-bottom: 5px;">HTML, CSS, Javascrip에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</h3>
+                <p><b>개인정보</b></p>
+                <ul>
+                    <li style="list-style: none;" >
+                        <label for="user_name">이름</label>
+                        <input type="text" id = "user_name" name = "user_name" required placeholder="공백없이 입력하세요" autofocus>
+                    </li>
+                    <li style="list-style: none;">
+                        <label for="phone_number">연락처</label>
+                        <input type="text" id = "phone_number" name = "phone_number" required placeholder="">
+                    </li>
+                </ul>
+                <p><b>지원 분야</b></p>
+                <ul>
+                    <li style="list-style: none;">
+                        <input type="radio" name = "radio1" id = "radio1" value="radio1">
+                        <label for="ratio1">웹 퍼블리싱</label>
+                    </li>
+                    <li style="list-style: none;">
+                        <input type="radio" name = "radio2" id = "radio2" value="radio2">
+                        <label for="ratio2">웹 애플리케이션 개발</label>
+                    </li>
+                    <li style="list-style: none;">
+                        <input type="radio" name = "radio3" id = "radio3" value="radio3">
+                        <label for="ratio3">개발 환경 개선</label>
+                    </li>
+                </ul>
+                 <p><b>지원 동기</b></p>
+                 <ul>
+                    <li style="list-style: none;">
+                        <textarea name="memo" id="memo" clos="80" rows="4" style="width: 500px; height: 100px;"></textarea>
+                    </li>
+                    <div class="buttons">
+                    <input type="submit" value="접수하기">
+                    <input type="reset" value="다시쓰기">
+                </div>
+                 </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

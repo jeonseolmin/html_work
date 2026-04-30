@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 20000px;
+    }
+    .parent{
+        width: 300px;
+        height: 300px;
+        background: yellow;
+        position: relative;
+    }
+    .child{
+        width: 50px;
+        height: 50px;
+        background: black;
+        position: relative;
+        top: 40px;
+        left: 50px;
+    }
+    .child2{
+        width: 50px;
+        height: 50px;
+        background: black;
+        position: relative;
+        top:-10px;
+        left: 200px;
+    }
+    .child3{
+        width: 150px;
+        height: 30px;
+        background: brown;
+        position: relative;
+        top: 100px;
+        left: 75px;
+    }
+    .fixed{
+        position: fixed;
+        top: 10px;
+        left: 400px;
+        background-color: brown;
+        width: 50px;
+        height: 50px;
+    }
+    .sticky{
+        
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class = "child2"></div>
+        <div class = "child3"></div>
+
+        <div class="sticky">sticky</div>
+        <div class="fixed">fixed</div>
+        <p>스크롤 해보세요</p>
+    </div>
+</body>
+</html>
